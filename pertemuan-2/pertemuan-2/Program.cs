@@ -1,4 +1,6 @@
-﻿class Kucing {      // Ini adalah Class
+﻿using pertemuan_2.Contoh;   // contoh penggunaan using untuk memanggil namespace
+
+class Kucing {      // Ini adalah Class
     public string Nama; // Ini attribute
     public string WarnaBulu;
     public string Ras;
@@ -23,7 +25,6 @@
     //    return Umur + 5;
     //}
 }
-
 
 class Program
 {
@@ -61,5 +62,7 @@ class Program
         int penambahan = Kalkulator.Tambah(3, 4);   // contoh pemanggilan static method
 
         Console.WriteLine($"3 + 4 = {penambahan}");
+
+        ContohPenggunaan.PrintKan(); // contoh pemanggilan namespace yang menggunakan using
     }
 }
