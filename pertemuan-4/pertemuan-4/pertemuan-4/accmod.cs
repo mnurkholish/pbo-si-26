@@ -1,37 +1,42 @@
-﻿public class Kasir {
-    public void Bayar(int nominal) {
-        Console.WriteLine("Dibayar tunai sebesar :" + nominal);
-    }
-
-    public void Bayar(int nominal1, int nominal2) {
-        Console.WriteLine("Dibayar cash dengan pecahan " + nominal1 + "dan" + nominal2 + ", total :" +(nominal1+nominal2));
-    }
-
-    public void Bayar(string id) {
-        Console.WriteLine("Dibayar cashless dengan id :" + id);
-    }
-
-    public virtual void Sapa(string pelanggan = "")
-    {
-        Console.WriteLine("Selamat Datang, selamat berbelanja!");
-    }
-}
-
-public class Indomaret : Kasir
+﻿class RekeningBank
 {
-    public override void Sapa(string pelanggan)
+    public string nama;
+    private int saldo;
+    // autoimplemented property/attribute
+    public string Rekening { get; set; }
+
+    public int getSaldo()
     {
-        Console.WriteLine("Selamat Datang, " + pelanggan + "!");
+        return saldo;
+    }
+
+    public void setSaldo(int value)
+    {
+        if (value < 0)
+        {
+            Console.WriteLine("saldo harus lebih dari 0");
+        }
+        else
+        {
+            saldo = value;
+        }
     }
 }
 
-public class Program {
-    public static void Main(string[] args) {
-        Kasir kasir = new Kasir();
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        RekeningBank bri = new RekeningBank();
+        bri.nama = "Kamelia";
+        //bri.saldo = 10000;
+        bri.setSaldo(-10000000);
+        bri.Rekening = "abc123";
 
-        //kasir.Bayar(20000);
-        //kasir.Bayar("23349301091");
-        //kasir.Bayar(10000, 5000);
-        kasir.Sapa();
+        string rekening = bri.Rekening;
+
+        int saldo = bri.getSaldo();
+
+        Console.WriteLine($"rekening {bri.nama} memiliki saldo Rp{saldo}");
     }
 }
