@@ -10,14 +10,28 @@
     public void Bayar(string id) {
         Console.WriteLine("Dibayar cashless dengan id :" + id);
     }
+
+    public virtual void Sapa(string pelanggan = "")
+    {
+        Console.WriteLine("Selamat Datang, selamat berbelanja!");
+    }
+}
+
+public class Indomaret : Kasir
+{
+    public override void Sapa(string pelanggan)
+    {
+        Console.WriteLine("Selamat Datang, " + pelanggan + "!");
+    }
 }
 
 public class Program {
     public static void Main(string[] args) {
         Kasir kasir = new Kasir();
 
-        kasir.Bayar(20000);
-        kasir.Bayar("23349301091");
-        kasir.Bayar(10000, 5000);
+        //kasir.Bayar(20000);
+        //kasir.Bayar("23349301091");
+        //kasir.Bayar(10000, 5000);
+        kasir.Sapa();
     }
 }
