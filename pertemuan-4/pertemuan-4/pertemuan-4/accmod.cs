@@ -19,8 +19,7 @@
 
 public class Indomaret : Kasir
 {
-    public override void Sapa(string pelanggan)
-    {
+    public override void Sapa(string pelanggan = "") {
         Console.WriteLine("Selamat Datang, " + pelanggan + "!");
     }
 }
@@ -32,6 +31,9 @@ public class Program {
         //kasir.Bayar(20000);
         //kasir.Bayar("23349301091");
         //kasir.Bayar(10000, 5000);
-        kasir.Sapa();
+        kasir.Sapa("Kolis");
+
+        Indomaret ki = new Indomaret();
+        ki.Sapa();
     }
 }
