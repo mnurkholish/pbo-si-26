@@ -1,5 +1,6 @@
 ﻿public class Kasir {
-    public void Bayar(int nominal) {
+     // overloading : nama method sama, parameter input berbeda, isi program/rumusnya bisa berbeda
+    public void Bayar(int nominal) { 
         Console.WriteLine("Dibayar tunai sebesar :" + nominal);
     }
 
@@ -11,7 +12,9 @@
         Console.WriteLine("Dibayar cashless dengan id :" + id);
     }
 
-    public virtual void Sapa(string pelanggan = "")
+    // overriding : nama sama, parameter input sama, isi program/rumusnya bisa berbeda
+    // hanya berlaku untuk inheritance (parent-child)
+    public virtual void Sapa(string pelanggan = "") // method di parent wajib pakai keyword virtual
     {
         Console.WriteLine("Selamat Datang, selamat berbelanja!");
     }
@@ -19,7 +22,7 @@
 
 public class Indomaret : Kasir
 {
-    public override void Sapa(string pelanggan)
+    public override void Sapa(string pelanggan) // method di child wajib pakai keyword override
     {
         Console.WriteLine("Selamat Datang, " + pelanggan + "!");
     }
