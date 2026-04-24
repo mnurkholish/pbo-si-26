@@ -8,9 +8,9 @@ namespace pertemuan_8.Database
     {
         public static string connString =
             "Host=localhost;" +
-            "Port=5432;" +
+            "Port=5433;" +
             "Database=praktikum-pbo;" +
             "Username=postgres;" +
-            "Password=Password123";
+            "Password=kamel123";
     }
 }
