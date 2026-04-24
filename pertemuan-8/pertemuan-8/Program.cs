@@ -19,7 +19,7 @@ class Program
             C_Mahasiswa mhs = new C_Mahasiswa(db);
 
             //Create
-            mhs.TambahMahasiswa("Kholis", "242410101060", "Sistem Informasi", 3.8m);
+            //mhs.TambahMahasiswa("Kholis", "242410101060", "Sistem Informasi", 3.8m);
 
             //Read
             List<string> result = mhs.GetAllMahasiswa();
@@ -28,10 +28,10 @@ class Program
             }
 
             //Update
-            mhs.UpdateMahasiswa(1, "Teknologi Informasi", 3.8m);
+            //mhs.UpdateMahasiswa(1, "Teknologi Informasi", 3.8m);
 
-            //Delete
-            mhs.HapusMahasiswa(2);
+            ////Delete
+            //mhs.HapusMahasiswa(2);
             
         }
         catch (Exception ex)

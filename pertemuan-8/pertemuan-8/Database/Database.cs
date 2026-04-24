@@ -1,7 +1,4 @@
 ﻿using Npgsql;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace pertemuan_8.Database
 {
