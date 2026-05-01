@@ -1,7 +1,12 @@
 namespace pertemuan_9 {
     public partial class Form1 : Form {
+        private string username;
+        private string password;
+
         public Form1() {
             InitializeComponent();
+            username = "Kamel";
+            password = "Kamel123";
         }
 
         private void Form1_Load(object sender, EventArgs e) {
@@ -9,9 +14,20 @@ namespace pertemuan_9 {
         }
 
         private void BtnLogin_Click(object sender, EventArgs e) {
-            FormDashboard dashboard = new FormDashboard();
-            dashboard.Show();
-            this.Hide();
+            string usernameInput = TbUsername.Text;
+            string passwordInput = TbPassword.Text;
+
+            if (usernameInput == username && passwordInput == password)
+            {
+                FormDashboard dashboard = new FormDashboard(username);
+                dashboard.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Login gagal", "Gagal", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
         }
     }
 }
