@@ -5,8 +5,8 @@ namespace pertemuan_9 {
 
         public Form1() {
             InitializeComponent();
-            username = "Kamel";
-            password = "Kamel123";
+            username = "";
+            password = "";
         }
 
         private void Form1_Load(object sender, EventArgs e) {

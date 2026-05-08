@@ -26,6 +26,7 @@
         {
             LbJudul = new Label();
             dgv1 = new DataGridView();
+            btnTambah = new Button();
             ((System.ComponentModel.ISupportInitialize)dgv1).BeginInit();
             SuspendLayout();
             // 
@@ -52,6 +53,19 @@
             dgv1.Size = new Size(814, 273);
             dgv1.TabIndex = 3;
             // 
+            // btnTambah
+            // 
+            btnTambah.BackColor = SystemColors.Highlight;
+            btnTambah.FlatAppearance.BorderSize = 0;
+            btnTambah.ForeColor = SystemColors.ControlLightLight;
+            btnTambah.Location = new Point(774, 168);
+            btnTambah.Name = "btnTambah";
+            btnTambah.Size = new Size(94, 29);
+            btnTambah.TabIndex = 4;
+            btnTambah.Text = "Tambah";
+            btnTambah.UseVisualStyleBackColor = false;
+            btnTambah.Click += btnTambah_Click;
+            // 
             // FormDashboard
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -59,6 +73,7 @@
             BackgroundImage = Properties.Resources.wallpaper;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(914, 600);
+            Controls.Add(btnTambah);
             Controls.Add(dgv1);
             Controls.Add(LbJudul);
             Margin = new Padding(3, 4, 3, 4);
@@ -74,5 +89,6 @@
 
         private Label LbJudul;
         private DataGridView dgv1;
+        private Button btnTambah;
     }
 }

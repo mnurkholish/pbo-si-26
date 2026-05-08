@@ -26,10 +26,16 @@ namespace pertemuan_9 {
             List<User> listUser = new List<User>();
             for (int i = 0; i < 5; i++)
             {
-                User user = new User($"dany {i}", 30, "Jember");
+                User user = new User(0, $"dany {i}", 30, "Jember");
                 listUser.Add(user);
             }
             return listUser;
+        }
+
+        private void btnTambah_Click(object sender, EventArgs e)
+        {
+            FormUser form = new FormUser();
+            form.ShowDialog();
         }
     }
 }
