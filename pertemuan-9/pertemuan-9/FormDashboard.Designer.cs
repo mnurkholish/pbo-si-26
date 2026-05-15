@@ -26,6 +26,12 @@
         {
             LbJudul = new Label();
             dgv1 = new DataGridView();
+            id = new DataGridViewTextBoxColumn();
+            nama = new DataGridViewTextBoxColumn();
+            umur = new DataGridViewTextBoxColumn();
+            asal = new DataGridViewTextBoxColumn();
+            edit = new DataGridViewButtonColumn();
+            hapus = new DataGridViewButtonColumn();
             btnTambah = new Button();
             ((System.ComponentModel.ISupportInitialize)dgv1).BeginInit();
             SuspendLayout();
@@ -47,11 +53,61 @@
             dgv1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgv1.BackgroundColor = Color.White;
             dgv1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgv1.Columns.AddRange(new DataGridViewColumn[] { id, nama, umur, asal, edit, hapus });
             dgv1.Location = new Point(54, 218);
             dgv1.Name = "dgv1";
             dgv1.RowHeadersWidth = 51;
             dgv1.Size = new Size(814, 273);
             dgv1.TabIndex = 3;
+            dgv1.CellContentClick += dgv1_CellContentClick;
+            // 
+            // id
+            // 
+            id.DataPropertyName = "id";
+            id.HeaderText = "Id";
+            id.MinimumWidth = 6;
+            id.Name = "id";
+            id.ReadOnly = true;
+            // 
+            // nama
+            // 
+            nama.DataPropertyName = "nama";
+            nama.HeaderText = "Nama";
+            nama.MinimumWidth = 6;
+            nama.Name = "nama";
+            nama.ReadOnly = true;
+            // 
+            // umur
+            // 
+            umur.DataPropertyName = "umur";
+            umur.HeaderText = "Umur";
+            umur.MinimumWidth = 6;
+            umur.Name = "umur";
+            umur.ReadOnly = true;
+            // 
+            // asal
+            // 
+            asal.DataPropertyName = "asal";
+            asal.HeaderText = "Asal";
+            asal.MinimumWidth = 6;
+            asal.Name = "asal";
+            asal.ReadOnly = true;
+            // 
+            // edit
+            // 
+            edit.HeaderText = "Edit";
+            edit.Text = "edit";
+            edit.UseColumnTextForButtonValue = true;
+            edit.MinimumWidth = 6;
+            edit.Name = "edit";
+            // 
+            // hapus
+            // 
+            hapus.HeaderText = "Hapus";
+            hapus.Text = "hapus";
+            hapus.UseColumnTextForButtonValue = true;
+            hapus.MinimumWidth = 6;
+            hapus.Name = "hapus";
             // 
             // btnTambah
             // 
@@ -90,5 +146,11 @@
         private Label LbJudul;
         private DataGridView dgv1;
         private Button btnTambah;
+        private DataGridViewTextBoxColumn id;
+        private DataGridViewTextBoxColumn nama;
+        private DataGridViewTextBoxColumn umur;
+        private DataGridViewTextBoxColumn asal;
+        private DataGridViewButtonColumn edit;
+        private DataGridViewButtonColumn hapus;
     }
 }
